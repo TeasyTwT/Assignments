@@ -1,0 +1,54 @@
+<!DOCYPET html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Css/GridStyle.Css">
+        <title>Login</title>
+        
+    </head>
+    <body>
+        <div class="navBan">
+            <div class="logo">
+                <a href="/Index.html"> <img class="logoimg" src="/Media/Ksante.jpg" alt="Picture of me, a CHAD" ></a>
+            </div>
+            <div class="nav">
+                    <div class="navButton">
+                        <button>
+                            <a href="/Pages/LoginPage.html">Login</a>
+                        </button>
+                        <button>
+                        <a href="/Pages/Menu.html">Order now</a>
+                    </button>
+                    </div>
+            </div>
+        </div>
+<div id="centerCard">
+<div>
+    <form class="loginF">
+        <label for="login">Login: </label>
+        <input type="text" id="firstname" name="firstname" placeholder="Username"/>
+        <input type="password" id="lastname" name="lastname" placeholder="Password"/>
+        <button id="libutton">Login</button> 
+        <label><input id="Wardpass" type="checkbox">: show password</label>
+    
+        <p><a href="/Pages/ForgotPass.Html">Forget your password?</a></p> 
+        <p><a href="/Pages/Register.html">Don't have an account?</a></p>
+    </form>
+</div>
+</div>
+    </body>
+    <script>
+        let input = document.getElementById('lastname');
+        let Ward = document.getElementById('Wardpass');
+        Ward.addEventListener('click', function () {
+            if (input.type === 'password') {
+                input.type = 'text';
+                Ward.textContent = '';
+            } else {
+                input.type = 'password';
+                Ward.textContent = '';
+            }
+        })
+    </script>   
+</html>

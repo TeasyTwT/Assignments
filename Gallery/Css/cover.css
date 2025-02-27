@@ -1,0 +1,13 @@
+body{
+  height: 100vh;
+}
+#mycont{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+#Cardbod{
+text-align: center;
+box-shadow: 15px 15px;
+}

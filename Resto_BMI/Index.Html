@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resto Bmi</title>
+
+    <!-- Bootstrap Link -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+    <!-- Jquery Link -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My own Css link -->
+     <link href="/Css/Boothelp.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <!-- Off canva -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Check Out</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul id="CheckoutList">
+
+            </ul>
+          <p id="Total">Total: </p>
+          <button type="submit" class="btn btn-primary">Check out</button>
+        </div>
+        
+      </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Soup-or Store</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Pages/BmiCalc.Html">BMI Calc</a>
+              </li>
+              <li class="nav-item">
+             <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
+                    CheckOut
+                  </a> 
+            </li>
+          </ul>
+        </div>
+ 
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <!-- Jumbotron zzz -->
+      <div id="carousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/Media/Rawmeats.webp" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="Media/Veges.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="/Media/Snackbanner.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- Body where the products go -->
+     <div class="container-fluid bg-dark text-center text-white">
+<h1> Products</h1>
+
+     </div>
+    <div class="container text-center">
+        <div class="row gy-3">
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/Apples.jfif
+                " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Apples</h5>
+                  <p class="card-text">$1.65 Ea</p>
+                  <button id="add2Cart" onclick="Add2Cart('Apples', 1.65)" type="button" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/banana.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Banana</h5>
+                  <p class="card-text">$0.31 Ea</p>
+                  <button type="button" onclick="Add2Cart('Banana', 0.31)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/oranges.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Oranges</h5>
+                  <p class="card-text">$2.64 Ea</p>
+                  <button type="button" onclick="Add2Cart('Oranges', 2.64)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/cucumber.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Cucumbers</h5>
+                  <p class="card-text">$2.99 Ea</p>
+                  <button type="button" onclick="Add2Cart('Cucumbers', 2.99)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/tomato.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tomatoes</h5>
+                  <p class="card-text">$0.66 Ea</p>
+                  <button type="button" onclick="Add2Cart('Tomatoes', 0.66)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/carrots.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Carrots</h5>
+                  <p class="card-text">4.99 per bundle</p>
+                  <button type="button" onclick="Add2Cart('Carrots', 4.99)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/beef.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Beef Steaks</h5>
+                  <p class="card-text">$30.84 for 3</p>
+                  <button type="button" onclick="Add2Cart('Beef Steaks', 30.84)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/rawchick.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Chicken wings</h5>
+                  <p class="card-text">$19.22</p>
+                  <button type="button" onclick="Add2Cart('Chicken wings', 19.22)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/tuna.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tuna</h5>
+                  <p class="card-text">$20.64 for 2</p>
+                  <button type="button" onclick="Add2Cart('Tuna', 20.64)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/chips.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Chips</h5>
+                  <p class="card-text">$4.99</p>
+                  <button type="button" onclick="Add2Cart('Chips', 4.99)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/cereal.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Cereals</h5>
+                  <p class="card-text">$5.99</p>
+                  <button type="button" onclick="Add2Cart('Cereals', 5.99)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Media/gummysnack.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Snacks</h5>
+                  <p class="card-text">$8.99</p>
+                  <button type="button" onclick="Add2Cart('Snacks', 8.99)" class="btn btn-primary">Add to cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <nav class="navbar p-3 bg-dark text-white">
+        <div class="container-fluid justify-content-center">
+          <a class="navbar-brand text-white " href="https://www.linkedin.com/in/jheteasroberts/">Teasy™ 2025</a>
+        </div>
+      </nav>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Javascript/Store.Js"></script>
+  </body>
+</html>

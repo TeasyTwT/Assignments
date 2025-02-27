@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="heading1" class="content">WOw</div>
+<div class="content">hmmmm</div>
+<div class="content">ok ok I SEE you</div>
+<form>
+    <p>
+    <label>Name</label><br>
+    <input type="text" id="Fullname" name="Fullname">
+    </p>
+    <p>
+    <label>Age</label><br>
+    <input type="number" id="Age" name="Age"> 
+    </p>
+    <p>
+    <label>Email</label><br>
+    <input type="email" id="Email" name="Email">
+    </p>
+<button type="button" onclick="Validate()">Submit</button>
+</form>
+
+<script>
+$('.content').html('<h1> Oh brother is that real??? </h1>').css('background-color', 'yellow');
+$('#heading1').html('<h1> bro ur not gonna catch me lackin').css('background-color', 'red');
+
+function Validate(){
+    const name = $('#Fullname').val();
+    const age = $('#Age').val();
+    const email = $('#Email').val();
+    console.log (name, age, email)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/*im not going to lie this css is very ugly, the idea is there for sure, but this looks very bad. This will need to be revised and cooked up again for sure.*/
+* { font-family: "Times New Roman", Times, serif;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    margin: 0px;
+    background-image: linear-gradient(to bottom, rgba(87, 233, 243, 0.589) 5%,rgb(255, 255, 255) 95%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    display: grid;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(102, 128, 128, 0.452);
+}
+.navBan{
+    display: grid;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(102, 128, 128, 0.452);
+}
+.container > div {
+    background-color: rgba(250, 235, 215, 0.459);
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.navBan > div {
+   /* background-color: rgba(250, 235, 215, 0.459);
+    border: 1px solid black; I leave this out unless I want to make a change*/
+    padding: 10px;
+}
+.navButton{
+    margin: 3vh;
+  
+
+}
+.logo{
+text-align: center;
+grid-column: 1;   
+}
+.logoimg{
+height: 75px;
+width: 75px;
+border-radius: 60%;
+
+}
+.nav{
+    display: grid;
+    grid-column: 2 /span 8;
+    grid-row: 1;
+    align-items: end;
+    justify-content: end;
+}
+.textColumn1{
+    grid-column: 1 / span 9;
+    grid-row: 2;
+    width: auto;
+    height: 240px;
+    overflow: auto;
+}
+.textColumn2{display: none;}
+.videoColumn1{
+    grid-area: video;
+    grid-column: 1 / span 9;
+    grid-row: 3;
+    height: 365px;
+    overflow: auto;
+}
+#footer{
+    font-size: x-small;
+    font-family: cursive;
+}
+button{
+    background-color: rgba(255, 255, 255, 0.87);
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(199, 199, 199);
+    border-radius: 15px;
+}
+form{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2px;
+}
+#firstname{
+    grid-column: 1;
+}
+#lastname{
+    grid-column: 1;
+}
+#libutton{
+    grid-column: 2;
+    grid-row: 2;
+}
+#Wardpass{
+grid-column: 2;
+grid-row: 2;
+}
+#centerCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 250px; 
+    background-color: rgba(102, 128, 128, 0.452);
+    border: 20px;
+    border-style: line;
+    border-color: white;
+    border-radius: 60px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.068);
+    height: 45%;
+    padding: 2vh;
+}
+
+
+
+@media only screen and (min-width: 768px) {.container{
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    height: auto;
+    background-color: rgba(102, 128, 128, 0.452);}    
+    .videoColumn1{
+        grid-area: video;
+        grid-column: 1 / span 9;
+        grid-row: 3;
+        height: 375px;
+        overflow: auto;
+    }
+}
+@media only screen and (min-width: 1024px) {.container{
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    background-color: rgba(102, 128, 128, 0.452);}
+    .textColumn1{
+        grid-column: 1 / span 5;
+        grid-row: 2;
+        height: 100%;
+    }
+    .videoColumn1{
+        grid-area: video;
+        grid-column: 6 / span 4;
+        grid-row: 2 / span 2;
+    }
+    .textColumn2{
+        display: block;
+        grid-column: 1 / span 5;
+        grid-row: 3;
+    }
+    /*.footer{
+        grid-column: 1 / span 9;
+        grid-row: 4;
+    }*/
+}

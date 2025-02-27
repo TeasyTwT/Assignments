@@ -1,0 +1,19 @@
+.carousel > .carousel-inner {
+  height: 360px;
+  display: flex;
+  align-items: center;
+}
+.carousel > .carousel-inner > .carousel-item {
+  height: auto;
+}
+
+.card-img-top {
+  height: 200px;
+}
+#Total {
+  text-align: end;
+}
+/* .nav-link:hover{
+    background-color: #3e444b;
+    border-radius: 50%;
+  } */
