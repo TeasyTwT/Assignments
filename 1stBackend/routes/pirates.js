@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 function parseBool(str) {
-  // Ternary operator: condition ? true-value : false-value
   return str.toLowerCase() === "true" ? true : false;
 }
 
